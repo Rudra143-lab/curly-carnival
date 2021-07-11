@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet"  href="style.css">
+    <title>ADV-C106 HAND GESTURE WEB APP - PART -1</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <center>
+            <h1 class="btn btn-success heading">GESTURE WEB APP
+                <br>
+
+                <span>&#128076;</span> <span>&#128077;</span> <span>&#128078;</span> <span>&#128400;</span>
+                <span>&#128406;</span> <span>&#128079;</span>
+            </h1>
+            <br><br>
+
+            <p class="top_para" style="font-size: 22px;">Take a selfie of a gesture to know about it's meaning
+                <br>
+                <br>
+                <b style="color: burlywood">On the following gestures the model is trained -</b>
+                <br>
+                <br>
+              <span>&#128076;</span>&nbsp;&nbsp;&nbsp;<span>&#128077;</span>&nbsp;&nbsp;&nbsp;<span>&#128078;</span>
+                
+            </p>
+            <br>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <label>Webcam View</label>
+                <div class="cam"></div>
+                <br>
+                <br>
+
+                <button onclick="take_snapshot()" class="btn btn-success">Capture</button>
+
+            </div>
+            
+            
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="pre">
+                    <p>Prediction 1</p>
+                    <label id="result_emotion_name"></label>
+                    <p class="emoji" id="update_emoji"></p>
+                </div>
+
+                <br>
+                <div class="pre2">
+                    <p>Prediction 2</p>
+                    <label id="result_emotion_name2"></label>
+                    <p class="emoji" id="update_emoji2"></p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <label>Snapshot - </label>
+
+
+
+                <div class="result"></div>
+                <br>
+                <br>
+
+                <button onclick="check()" class="btn btn-success">Prediction</button>
+            </div>
+
+        </center>
+
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
